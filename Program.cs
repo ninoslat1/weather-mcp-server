@@ -18,4 +18,6 @@ builder.Services.AddSingleton(_ =>
 
 var app = builder.Build();
 
+Console.WriteLine("Weather MCP Server is starting...");
+
 await app.RunAsync();

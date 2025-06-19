@@ -5,11 +5,11 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace WeatherMCP.MCP.Extensions
+namespace WeatherMCP.Extensions
 {
     internal static class MCPHttpClient
     {
-        public static async Task<JsonDocument> ReadJsonDoc(this HttpClient httpClient, string reqUri)
+        public static async Task<JsonDocument> ReadJsonDocAsync(this HttpClient httpClient, string reqUri)
         {
             using var response = await httpClient.GetAsync(reqUri);
             response.EnsureSuccessStatusCode();
